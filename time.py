@@ -147,8 +147,7 @@ class AutoProfileMod(loader.Module):
         await utils.answer(message, self.strings("enabled_bio", message))
 
         while self.bio_enabled is True:
-            time2 = time + 2
-            current_time = time2.strftime("%H:%M")
+            current_time = time.strftime("%H + 2:%M + 2")
             bio = raw_bio.format(time=current_time)
             await self.client(functions.account.UpdateProfileRequest(
                 about=bio
